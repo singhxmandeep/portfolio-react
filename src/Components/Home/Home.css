@@ -1,0 +1,62 @@
+.home{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.home img{
+    margin-top: 130px;
+}
+
+.home h1{
+    text-align: center;
+    width: 70%;
+    font-size: 65px;
+    font-weight: 900;
+}
+
+.home h1 span{
+    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home p{
+    width: 50%;
+    text-align: center;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.home-action{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.home-connect{
+    padding: 20px 60px;
+    border-radius: 50px;
+    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.08%);
+    cursor: pointer;
+}
+
+.home-connect:hover{
+    border: 2px solid white;
+}
+
+.home-resume{
+    padding: 20px 70px;
+    border-radius: 50px;
+    border: 2px solid #FFF;
+    cursor: pointer;
+}
+
+.home-resume:hover{
+    border-color: #B415FF;
+}
