@@ -39,6 +39,12 @@
     margin-bottom: 50px;
 }
 
+.home img{
+    border-radius: 100%;
+    max-width: 400px;
+    
+}
+
 .home-connect{
     padding: 20px 60px;
     border-radius: 50px;

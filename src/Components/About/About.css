@@ -7,6 +7,12 @@
     margin: 20px 70px;
 }
 
+.about img{
+    border-radius: 100%;
+    max-width: 400px;
+    
+}
+
 .about-title{
     position: relative;
 }
