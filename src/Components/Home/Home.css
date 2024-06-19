@@ -6,7 +6,7 @@
 }
 
 .home img{
-    margin-top: 130px;
+    margin-top: 60px;
 }
 
 .home h1{
@@ -25,9 +25,9 @@
 
 .home p{
     width: 50%;
-    text-align: center;
-    font-size: 22px;
-    line-height: 40px;
+    text-align: start;
+    font-size: 21px;
+    line-height: 35px;
 }
 
 .home-action{
@@ -63,6 +63,53 @@
     cursor: pointer;
 }
 
+.home-resume .resume-link {
+    text-decoration: none;
+    color: white;
+}
+
+.home-resume .resume-link:hover {
+    color: #B415FF;
+}
+
 .home-resume:hover{
     border-color: #B415FF;
+}
+
+
+@media(max-width:768px){
+    .home img{
+        margin-top: 50px;
+        width: 260px;
+    }
+
+    .home h1{
+        width: 90%;
+        font-size: 40px;
+    }
+
+    .home p{
+        width: 60%;
+        font-size: 17px;
+        line-height: 30px;
+        margin: 8px 0px;
+    }
+
+    .home-action{
+        gap: 16px;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 40px;
+    }
+
+    .home-connect{
+        padding: 20px 30px;
+        border-radius: 40px;
+
+    }
+
+    .home-resume{
+        padding: 20px 50px;
+        border-radius: 40px;
+    }
 }

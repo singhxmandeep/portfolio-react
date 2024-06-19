@@ -72,3 +72,25 @@
     transform: scale(1.1);
     transform: 0.3s;
 }
+
+@media(max-width: 768px){
+    .footer{
+        margin: 50px 70px;
+    }
+
+    .footer-top{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .footer-bottom{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 50px;
+    }
+
+    .footer-subscribe{
+        font-size: 20px;
+        padding: 15px 40px;
+    }
+}
