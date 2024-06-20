@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     gap: 80px;
-    margin: 80px 170px;
+    margin: 80px 130px;
 }
 
 .contact-title{
@@ -14,7 +14,8 @@
 .contact-title h1{
     padding: 0 30px;
     font-size: 80px;
-    font-weight: 600;
+    font-weight: 500;
+    margin-top: 50px;
 
 }
 
@@ -67,11 +68,16 @@
     gap: 20px;
 }
 
+.contact-detail p a{
+    color: #D8D8D8;
+    text-decoration: none;
+}
+
 .contact-right{
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 30px;
+    gap: 15px;
 }
 
 .contact-right label{
@@ -122,10 +128,10 @@
 }
 
 
-@media(max-width: 768px){
+@media(max-width: 950px){
     .contact{
         gap: 50px;
-        margin: 50px 70px;
+        margin: 50px 20px;
         align-items: start;
     }
 
@@ -165,17 +171,18 @@
     }
 
     .contact-right input{
-        width: 100%;
+        width: 90%;
         font-size: 20px;
     }
 
     .contact-right textarea{
-            width: 95%;
+            width: 80%;
             font-size: 20px;
     }
 
     .contact-submit{
         font-size: 20px;
         padding: 15px 40px;
+        margin: 0px 80px;
     }
 }

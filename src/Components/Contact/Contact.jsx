@@ -10,7 +10,7 @@ const Contact = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending....");
+    setResult("Sending...");
     const formData = new FormData(event.target);
 
     formData.append("access_key", "0e4629d1-b1cc-4594-af0a-27f87b3b3a89");
@@ -34,25 +34,24 @@ const Contact = () => {
     <div id="contact" className="contact">
       <div className="contact-title">
         <h1>Get in touch</h1>
-        <img src={theme_pattern} alt="" />
+        <img src={theme_pattern} alt="Theme Pattern" />
       </div>
       <div className="contact-section">
         <div className="contact-left">
           <h1>Let's talk</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui
-            laudantium consequuntur nostrum ipsa suscipit tenetur maxime,
-            repellendus praesentium doloremque facilis?
-          </p>
+          <p>If you have any questions, want to discuss a project, or just want to say hello, feel free to get in touch. I'm always open to new opportunities and collaborations.</p>
           <div className="contact-details">
             <div className="contact-detail">
-              <img src={mail_icon} alt="" /> <p>mandeepsingh.71ms31@gmial.com</p>
+              <img src={mail_icon} alt="Email Icon" /> 
+              <p><a href="mailto:mandeepsingh.71ms31@gmail.com">mandeepsingh.71ms31@gmail.com</a></p>
             </div>
             <div className="contact-detail">
-              <img src={call_icon} alt="" /> <p>+1(343)-978-2823</p>
+              <img src={call_icon} alt="Phone Icon" /> 
+              <p><a href="tel:+13439782823">+1 (343) 978-2823</a></p>
             </div>
             <div className="contact-detail">
-              <img src={location_icon} alt="" /> <p>Ottawa, ON, Canada</p>
+              <img src={location_icon} alt="Location Icon" /> 
+              <p>Ottawa, ON, Canada</p>
             </div>
           </div>
         </div>

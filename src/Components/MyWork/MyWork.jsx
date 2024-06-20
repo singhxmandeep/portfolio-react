@@ -8,20 +8,32 @@ const MyWork = () => {
   return (
     <div id='mywork' className='mywork'>
         <div className="mywork-title">
-            <h1>My latest work</h1>
+            <h1>My Latest Work</h1>
             <img src={theme_pattern} alt="" />
         </div>
         <div className="mywork-container">
-            {mywork_data.map((work,index)=>{
-                return <img key={index} src={work.w_img} alt="" />
-            })}
+            {mywork_data.map((work, index) => (
+                <div key={index} className="mywork-item">
+                  <div>
+                   <a href={work.w_link} target="_blank" rel="noopener noreferrer">
+                    <img src={work.w_img} alt={work.w_name} />
+                    </a>
+                    </div>
+                    <div className="mywork-content">
+                        <h2>{work.w_name}</h2>
+                        <p>{work.w_desc}</p>
+                    </div>
+                </div>
+            ))}
         </div>
+
+        <a className='a-showmore' href="https://github.com/singhxmandeep" target="_blank" rel="noopener noreferrer">
         <div className="mywork-showmore">
             <p>Show More</p>
-            <img src={arrow_icon} alt="" />
+            <img className='arrow-showmore' src={arrow_icon} alt="Show more" />
+            <img className='git' src="https://tse3.mm.bing.net/th?id=OIP.9B4NoA0XTQUhk62iCKkCdQHaH7&pid=Api&P=0&h=180" alt="GitHub Icon" />
         </div>
-       
-        
+        </a>
     </div>
   )
 }

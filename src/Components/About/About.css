@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     gap: 80px;
-    margin: 20px 90px;
+    margin: 80px 130px;
 }
 
 .about img{
@@ -21,6 +21,7 @@
     padding: 0px 30px;
     font-weight: 500;
     font-size: 80px;
+    margin-top: 50px;
 }
 
 .about-title img{
@@ -120,7 +121,7 @@
     font-weight: 500;
 }
 
-@media(max-width: 768px){
+@media(max-width: 900px){
     .about{
         gap: 80px;
         margin: 50px 70px;

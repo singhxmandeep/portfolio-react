@@ -15,6 +15,7 @@
     padding: 0 30px;
     font-size: 80px;
     font-weight: 500;
+    margin-top: 50px;
   }
   
   .services-title img {
@@ -81,9 +82,12 @@
   .services-readmore p {
     padding-top: 10px;
   }
+
+  .services-readmore img{
+    padding-top: 15px;
+  }
   
-/* Modal */
-.modal {
+  .modal {
     display: none; /* Start with modal hidden */
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     position: fixed;
@@ -93,28 +97,45 @@
     right: 0;
     z-index: 1050; /* Ensure it's above other content */
     overflow: hidden;
-  }
-  
-  .modal.show {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.modal.show {
     display: flex; /* Show modal when 'show' class is present */
     align-items: center;
     justify-content: center;
-  }
-  
-  .modal-dialog {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-dialog {
     max-width: 800px; /* Adjust max-width as needed */
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     background-color: #1a1a1a; /* Background color */
     border-radius: 10px;
     border: 2px solid white;
     padding: 30px;
     color: #d4d4d4; /* Text color */
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow */
-  }
-  
-  .modal-title {
+    transform: scale(0.9);
+    transition: transform 0.5s ease;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -122,43 +143,44 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-  
-  .modal-body {
+}
+
+.modal-body {
     font-size: 18px;
     line-height: 28px;
     max-width: 100%; /* Adjust as needed */
     margin-bottom: 20px;
-  }
+}
 
-  .modal-body h2{
+.modal-body h2 {
     margin: 10px 0px;
-  }
-  
-  .modal-footer {
+}
+
+.modal-footer {
+    display: flex;
     justify-content: flex-end;
     gap: 10px;
-  }
-  
-  .modal-footer .btn-secondary {
+}
+
+.modal-footer .btn-secondary {
     background-color: #3f0028; /* Button background color */
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 50px;
-    border: 2px solid  #8d015a; 
-    transition: background-color 0.3s ease;
-  }
+    border: 2px solid #8d015a;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-  .modal-footer .btn-secondary:hover {
+.modal-footer .btn-secondary:hover {
     transform: scale(1.1);
     background: #3f0028;
-    border: 2px solid  white; 
-    transition: background-color 0.3s ease;
-  }
+    border: 2px solid white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
   
   
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .services {
       align-items: flex-start;
       gap: 70px;
@@ -195,8 +217,15 @@
     }
   
     .services-container {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr ;
       gap: 30px;
+    }
+
+    @media(max-width: 600px){
+      .services-container {
+        grid-template-columns: 1fr ;
+        gap: 30px;
+      }
     }
   }
   

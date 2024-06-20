@@ -1,8 +1,14 @@
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 70px;
+    margin: 0px 80px;
+    position: fixed;
+    width: calc(100% - 160px);
+    top: 0;
+    z-index: 1000;
+    background: #161513;
+    /* padding-bottom: 50px; */
 }
 
 
@@ -42,7 +48,6 @@
 
 .logo{
     width: 75px;
-    height: auto;
 }
 .nav-menu li img{
     display: flex;
@@ -59,9 +64,17 @@
 }
 
 
-@media(max-width:768px){
+@media(max-width:900px){
     .navbar{
-        margin: 20px 50px;
+        margin: 0 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        background: #161513;
     }
 
     .nav-connect{

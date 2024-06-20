@@ -8,32 +8,31 @@ const Footer = () => {
     <div id="footer" className="footer">
       <div className="footer-top">
         <div className="footer-top-left">
-          <img src={logo} alt="" />
+          <img className="logo" src={logo} alt="Logo" />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe enim
-            unde, consequuntur facilis cum adipisci magni beatae laudantium
-            voluptatibus maxime provident.
+            Welcome to our website. We offer a range of services to meet your needs.
+            Connect with us to find out more about what we can do for you.
           </p>
         </div>
         <div className="footer-top-right">
           <div className="footer-email-input">
-            <img src={user_icon} alt="" />
+            <img src={user_icon} alt="User Icon" />
             <input type="email" name="email" placeholder="Enter your email" />
           </div>
           <div className="footer-subscribe">Subscribe</div>
         </div>
       </div>
-        <hr />
-        <div className="footer-bottom">
-          <p className="footer-bottom-left">
-            Lorem ipsum dolor, sit amet consectetur adipisicing.
-          </p>
-          <div className="footer-bottom-right">
-            <p>Term of Services</p>
-            <p>Privacy Policy</p>
-            <p>Connect with me</p>
-          </div>
+      <hr />
+      <div className="footer-bottom">
+        <p className="footer-bottom-left">
+          © 2024 Mandeep Singh. All rights reserved.
+        </p>
+        <div className="footer-bottom-right">
+          <p>Terms of Service</p>
+          <p>Privacy Policy</p>
+          <p>Connect with Me</p>
         </div>
+      </div>
     </div>
   );
 };

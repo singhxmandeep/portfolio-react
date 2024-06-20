@@ -16,11 +16,12 @@ const Home = () => {
       With a strong foundation in web technologies and a passion for creating dynamic and responsive web applications, I specialize in building and maintaining websites that offer seamless user experiences. As a student at Algonquin College, I am constantly learning and applying new skills to my projects. Explore my portfolio to see some of the innovative solutions I've developed.
       </p>
       <div className="home-action">
-        <div className="home-connect"><AnchorLink className='anchor-link'offset={50} href='#contact'>Connect with me</AnchorLink>
-        </div>
-        <div className="home-resume">
-          <a href="/resume.pdf" download="Mandeep_Singh_Resume.pdf" className="resume-link">My resume</a>
-        </div>
+        <AnchorLink className='anchor-link'offset={50} href='#contact'>
+          <div className="home-connect">Connect with me</div>
+        </AnchorLink>
+        <a href="/resume.pdf" download="Mandeep_Singh_Resume.pdf" className="resume-link">
+          <div className="home-resume">My resume</div>
+        </a>
       </div>
     </div>
   );
