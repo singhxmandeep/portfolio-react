@@ -47,6 +47,8 @@
 
 .home p.full-paragraph {
     display: block; /* Default display for larger screens */
+    text-align: justify;
+    margin: 0 auto;
 }
 
 .home p.short-paragraph {
@@ -140,6 +142,8 @@
 
 .home p.short-paragraph {
     display: block; /* Show short paragraph on small screens */
+    text-align: justify;
+    margin: 0 auto;
 }
 
   .home-action {
