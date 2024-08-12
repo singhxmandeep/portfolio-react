@@ -28,6 +28,13 @@ const mywork_data = [
         w_link: "https://aiimagecraft.netlify.app"
     },
     {
+        w_no: 6,
+        w_name: "Text Convertor ( TextUtil )",
+        w_img: project6_img,
+        w_desc: "Another web design project focusing on responsive and accessible design.",
+        w_link: "https://textnest.netlify.app/"
+    },
+    {
         w_no: 3,
         w_name: "Notes Taking App ( iNoteBook )",
         w_img: project3_img,
@@ -41,13 +48,7 @@ const mywork_data = [
         w_desc: "A news application that fetches and displays news articles using the News API.",
         w_link: "https://newsmonkeyca.netlify.app"
     },
-    {
-        w_no: 6,
-        w_name: "Text Convertor ( TextUtil )",
-        w_img: project6_img,
-        w_desc: "Another web design project focusing on responsive and accessible design.",
-        w_link: "https://textnest.netlify.app/"
-    },
+    
 ]
 
 export default mywork_data;
