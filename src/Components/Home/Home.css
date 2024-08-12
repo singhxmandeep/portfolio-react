@@ -1,116 +1,160 @@
-.home{
+.home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.home img {
+  margin-top: 150px;
+  border: 4px solid white;
+  width: 250px;
+  border-radius: 100%;
+  max-width: 400px;
+}
+
+.home h1 {
+  text-align: center;
+  width: 70%;
+  font-size: 65px;
+  font-weight: 900;
+}
+
+.home h1 .typing-effect {
+  display: inline-block;
+  font-family: "outfit"; /* Monospaced font for typing effect */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow */
+  border-right: 3px solid; /* Cursor effect */
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.home h1 span {
+  background: linear-gradient(270deg, #df8908 10%, #b415ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home p {
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 35px;
+    align-items: start;
+  width: 50%;
+  text-align: start;
+  font-size: 21px;
+  line-height: 35px;
 }
 
-.home img{
-    margin-top: 150px;
+.home p.full-paragraph {
+    display: block; /* Default display for larger screens */
 }
 
-.home h1{
-    text-align: center;
-    width: 70%;
-    font-size: 65px;
-    font-weight: 900;
+.home p.short-paragraph {
+    display: none; /* Hide on larger screens */
 }
 
-.home h1 span{
-    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.home-action {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 50px;
 }
 
-.home p{
-    width: 50%;
-    text-align: start;
-    font-size: 21px;
-    line-height: 35px;
+.home-connect {
+  padding: 20px 60px;
+  border-radius: 50px;
+  background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.08%);
+  cursor: pointer;
 }
 
-.home-action{
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    font-size: 15px;
-    font-weight: 500;
-    margin-bottom: 50px;
+.home-connect:hover {
+  border: 2px solid white;
 }
 
-.home img{
-    border-radius: 100%;
-    max-width: 400px;
-    
-}
-
-.home-connect{
-    padding: 20px 60px;
-    border-radius: 50px;
-    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.08%);
-    cursor: pointer;
-}
-
-.home-connect:hover{
-    border: 2px solid white;
-}
-
-.home-resume{
-    padding: 20px 70px;
-    border-radius: 50px;
-    border: 2px solid #FFF;
-    cursor: pointer;
+.home-resume {
+  padding: 20px 70px;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  cursor: pointer;
 }
 
 .resume-link {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .resume-link:hover {
-    color: #B415FF;
+  color: #b415ff;
 }
 
-.home-resume:hover{
-    border-color: #B415FF;
+.home-resume:hover {
+  border-color: #b415ff;
 }
 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 
-@media(max-width:900px){
-    .home img{
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
 
-        margin-top: 100px;
-        width: 260px;
-    }
+@media (max-width: 900px) {
+  .home img {
+    height: 150px;
+    width: 150px !important;
+    margin-top: 100px;
+  }
 
-    .home h1{
-        width: 90%;
-        font-size: 40px;
-    }
+  .home h1 {
+    width: 90%;
+    font-size: 40px;
+  }
 
-    .home p{
-        width: 60%;
-        font-size: 17px;
-        line-height: 30px;
-        margin: 8px 0px;
-    }
-
-    .home-action{
-        gap: 16px;
+  .home p {
+        width: 70%;
         font-size: 16px;
-        font-weight: 500;
-        margin-bottom: 40px;
-    }
+        line-height: 30px;
+        margin: 0 auto; /* Center align the paragraph block */
+        text-align: center; /* Center align the text within the block */
+        align-items: start;
+  }
 
-    .home-connect{
-        padding: 20px 30px;
-        border-radius: 40px;
+  .home p.full-paragraph {
+    display: none; /* Hide full paragraph on small screens */
+}
 
-    }
+.home p.short-paragraph {
+    display: block; /* Show short paragraph on small screens */
+}
 
-    .home-resume{
-        padding: 20px 50px;
-        border-radius: 40px;
-    }
+  .home-action {
+    gap: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+
+  .home-connect {
+    padding: 17px 45px;
+    border-radius: 40px;
+  }
+
+  .home-resume {
+    padding: 15px 32px;
+    border-radius: 40px;
+  }
 }

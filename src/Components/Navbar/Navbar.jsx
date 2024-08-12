@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Navbar.css';
 import logo from '../../assets/logo.png';
 import underline from '../../assets/nav_underline.svg';
@@ -7,33 +7,52 @@ import menu_open from '../../assets/menu_open.svg';
 import menu_close from '../../assets/menu_close.svg';
 
 const Navbar = () => {
-  const [menu, setMenu] = useState(false); // Use boolean state to track menu open/close
-  const [activeMenu, setActiveMenu] = useState(''); // Track which menu item is active
-  const menuRef = useRef(null); // Initialize useRef with null
+  const [menu, setMenu] = useState(false);
+  const [activeMenu, setActiveMenu] = useState('');
+  const menuRef = useRef(null);
+  const menuButtonRef = useRef(null);
 
   const openMenu = () => {
-    setMenu(true); // Update state to open menu
+    setMenu(true);
     if (menuRef.current) {
-      menuRef.current.style.right = '0'; // Slide menu in from right
+      menuRef.current.style.right = '0';
     }
   };
 
   const closeMenu = () => {
-    setMenu(false); // Update state to close menu
+    setMenu(false);
     if (menuRef.current) {
-      menuRef.current.style.right = '-350px'; // Slide menu out to the right
+      menuRef.current.style.right = '-350px';
     }
   };
 
   const handleMenuClick = (menuName) => {
     setActiveMenu(menuName);
-    setMenu(false); // Close the menu after clicking
+    setMenu(false);
   };
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target) && !menuButtonRef.current.contains(event.target)) {
+      closeMenu();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
     <div className='navbar'>
       <img className='logo' src={logo} alt='Logo' />
-      <img src={menu_open} onClick={openMenu} alt='Open Menu' className='nav-mob-open' />
+      <img
+        src={menu_open}
+        onClick={openMenu}
+        alt='Open Menu'
+        className='nav-mob-open'
+        ref={menuButtonRef}
+        aria-expanded={menu}
+      />
       <ul ref={menuRef} className={`nav-menu ${menu ? 'active' : ''}`}>
         <img src={menu_close} onClick={closeMenu} alt='Close Menu' className='nav-mob-close' />
         <li>

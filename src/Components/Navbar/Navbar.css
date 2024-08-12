@@ -1,19 +1,19 @@
+/* General Styles */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0px 80px;
+    margin: 0 80px;
     position: fixed;
     width: calc(100% - 160px);
-    top: 0;
-    z-index: 1000;
+    top: 0; /* Ensure the navbar is at the top of the page */
+    z-index: 1000; /* Ensure it is above other elements */
     background: #161513;
-    /* padding-bottom: 50px; */
+    padding: 10px 0; /* Add padding for vertical spacing */
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
 }
 
-
-.nav-menu{
-    
+.nav-menu {
     display: flex;
     align-items: center;
     list-style: none;
@@ -22,101 +22,134 @@
     overflow-y: auto;
 }
 
-.nav-mob-close{
+.nav-mob-close {
     display: none;
 }
 
-.nav-connect{
-    padding: 20px 40px;
+.nav-connect {
+    padding: 15px;
     border-radius: 50px;
     background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
     font-size: 15px;
     cursor: pointer;
-    transition: 0.5s;
+    transition: transform 0.5s;
 }
 
-.nav-connect:hover{
+.nav-connect:hover {
     transform: scale(1.05);
 }
 
-.nav-menu li{
+.nav-menu li {
     display: flex;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
 }
 
-.logo{
-    width: 75px;
+.logo {
+    position: relative;
+    width: 182px !important;;
+
 }
-.nav-menu li img{
+
+.nav-menu li img {
     display: flex;
     margin: auto;
 }
 
-.anchor-link{
+.anchor-link {
     text-decoration: none;
     color: white;
 }
 
-.nav-mob-open{ 
+.nav-mob-open {
     display: none;
 }
 
-
-@media(max-width:900px){
-    .navbar{
-        margin: 0 50px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-        background: #161513;
+/* Media Queries */
+@media (max-width: 1200px) {
+    .navbar {
+        margin: 0 40px; /* Adjust margin for medium-sized screens */
+        width: calc(100% - 80px); /* Adjust width for medium-sized screens */
     }
 
-    .nav-connect{
+    .nav-menu {
+        gap: 40px; /* Adjust gap for medium-sized screens */
+        font-size: 18px; /* Adjust font size for medium-sized screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        height: 63px;
+        top: -10px;
+        margin: 0 20px;
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    }
+
+    .nav-connect {
         display: none;
     }
 
-    .nav-mob-open{
-        display: block;
-        position: fixed;
-        right: 50px;
+    .logo {
+    top: 10px;
+    right: 22px;
     }
 
-    .nav-mob-close{
+    .nav-mob-open {
         display: block;
-        position: relative;
-        top: 30px;
-        left: 250px;
+        position: fixed;
+        right: 20px; /* Adjust position for smaller screens */
+        top: 20px; /* Adjust top position for smaller screens */
         width: 30px;
+        height: 30px; /* Adjust size for smaller screens */
     }
 
-    .nav-menu{
+    .nav-mob-close {
+        display: block;
+        position: absolute;
+        top: 20px; /* Adjust position for smaller screens */
+        right: 20px; /* Adjust right position for smaller screens */
+        width: 30px;
+        height: 30px; /* Adjust size for smaller screens */
+    }
+
+    .nav-menu {
         position: fixed;
-        flex-direction: column;
-        align-items: start;
         top: 0;
-        gap: 30px;
-        background-color: #1F0016;
-        width: 350px;
+        right: -100%; /* Hide off-screen by default */
+        width: 250px; /* Adjust width for smaller screens */
         height: 100%;
-        z-index: 2;
-        transition: right 0.5s;
-        right: -350px;
+        background-color: #1F0016;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 2rem;
+        transition: right 0.3s ease; /* Adjust transition for smooth animation */
+        z-index: 1000;
     }
 
-    .nav-menu li{
-        font-size: 30px;
-        padding-left: 100px;
+    .nav-menu.active {
+        right: 0; /* Show menu on click */
+    }
+
+    .nav-menu li {
+        font-size: 24px; /* Adjust font size for smaller screens */
+        padding-left: 20px; /* Adjust padding for smaller screens */
         flex-direction: row;
         gap: 20px;
     }
+}
 
-    
+@media (max-width: 600px) {
+    .nav-menu {
+        width: 200px; /* Further adjust width for very small screens */
+    }
 
-
+    .nav-menu li {
+        font-size: 20px; /* Further adjust font size for very small screens */
+        padding-left: 10px; /* Further adjust padding for very small screens */
+    }
 }
