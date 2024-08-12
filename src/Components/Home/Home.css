@@ -67,6 +67,7 @@
   border-radius: 50px;
   background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.08%);
   cursor: pointer;
+  border: 2px solid white;
 }
 
 .home-connect:hover {
@@ -74,7 +75,7 @@
 }
 
 .home-resume {
-  padding: 20px 70px;
+  padding: 20px 60px;
   border-radius: 50px;
   border: 2px solid #fff;
   cursor: pointer;
